@@ -1,0 +1,49 @@
+{% extends './base.html' %}
+
+{% block content %}
+  <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+    <div class="lh-100">
+      <h6 class="mb-0 text-white lh-100">Bootstrap</h6>
+      <small>Since 2011</small>
+    </div>
+  </div>
+
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Info</h6>
+        <form class="row g-3" method="POST">
+            {% csrf_token %}
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Company</label>
+                <input type="text" class="form-control" name="company">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Reporter</label>
+                <input type="text" class="form-control" name="reporter">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" name="addr" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Keyword</label>
+                <input type="text" class="form-control" name="keyword" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">cate 1</label>
+                <input type="text" class="form-control" name="cate1">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">cate 2</label>
+                <input type="text" class="form-control" name="cate2">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">cate 3</label>
+                <input type="text" class="form-control" name="cate3">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
